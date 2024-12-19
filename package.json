@@ -1,0 +1,36 @@
+{
+  "name": "findata-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for fetching financial data from Alpha Vantage.",
+  "license": "MIT",
+  "main": "src/index.js",
+  "type": "module",
+  "bin": {
+    "findata-mcp-server": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/*.js",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "prettier-format": "prettier --config .prettierrc src/**/*.ts --write",
+    "lint": "eslint src/ --ext .ts"
+  },
+  "keywords": [],
+  "author": "xbluecode",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "alphavantage": "^2.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@typescript-eslint/eslint-plugin": "^8.18.1",
+    "@typescript-eslint/parser": "^8.18.1",
+    "eslint": "^9.17.0",
+    "prettier": "^3.4.2",
+    "shx": "^0.3.4",
+    "typescript": "^5.7.2"
+  }
+}
